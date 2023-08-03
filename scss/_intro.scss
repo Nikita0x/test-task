@@ -1,0 +1,100 @@
+@import './variables';
+@import './mixins';
+
+.intro {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 120px;
+    @include min-width('md') {
+        flex-direction: row;
+        padding: 0px;
+    }
+}
+.intro__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        @include min-width('md') {
+        align-items: start;
+        padding: 0px;
+    }
+}
+.intro__title {
+    color: $light-gray;
+    font-size: $title-size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: $title-size;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    padding: 10px;
+    @include min-width('sm') {
+        margin-bottom: 40px;
+        padding: 10px;
+    }
+    @include min-width('lg') {
+        margin-bottom: 90px;
+        padding: 0px;
+    }
+}
+.intro__title-black {
+    display: block;
+    color: $gray;
+    font-weight: 700;
+}
+.intro__buttons {
+    color: $gray;
+    margin-bottom: 40px;
+    @include min-width('md') {
+        margin-bottom: 90px;
+        padding: 0px;
+    }
+}
+.intro__button-left {
+    @include button__mini;
+    @include button-transition;
+    margin-right: 23px;
+}
+.intro__pages {
+    color: $light-gray;
+    font-size: $xl;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $xl;
+    margin-bottom: 40px;
+    @include min-width('md') {
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+}
+.intro__pages-slash {
+    margin: 0 37px;
+}
+
+.intro__right {
+    position: relative;
+}
+.intro__right-image{
+    width: 100%;
+    max-width: 770px
+}
+.button__big {
+    @include button__big;
+    @include button-transition;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.button__big-text {
+    text-transform: uppercase;
+    color:$gray;
+    font-size: $sm;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $sm;
+    letter-spacing: 2.4px;
+    margin-right: 12px;
+}

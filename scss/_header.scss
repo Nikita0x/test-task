@@ -1,0 +1,118 @@
+@import './variables';
+@import './mixins';
+
+.header {
+    @include container;
+    display: flex;
+    align-items: center;
+    height: 102px;
+    justify-content: space-between;
+    @include min-width("sm") {
+        justify-content: flex-start;
+    }
+}
+.header__spacer{
+    display: none;
+    // border: 1px solid green;
+    @include min-width("sm") {
+        display: block;
+        width: 330px;
+    }
+}
+.header__spacer-end {
+    display: none;
+    // border: 1px solid green;
+    @include min-width("sm") {
+        display: block;
+        width: 134px;
+    }
+}
+
+
+// header-logo
+.header-logo {
+    position: relative;
+    // border: 2px solid  black;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 68.552px;
+    height: 41.527px;
+}
+.header-logo__text {
+    position: absolute;
+    bottom: 0;
+}
+.header__links {
+    display: flex;
+}
+.header__link {
+    display: none;
+    @include min-width("xm") {
+        display: flex;
+        margin-right: 20px;
+    }
+    @include min-width("md") {
+        margin-right: 30px;
+    }
+    @include min-width("lg") {
+        margin-right: 40px;
+    }
+    @include min-width("xl") {
+        margin-right: 60px;
+    }
+}
+.header__link > a {
+    color: $gray;
+    font-size: $sm;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $sm;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    position: relative;
+    /* overflow: hidden; */ /* Remove this line */
+}
+
+.header__link > a::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    background-color: black;
+    transition: opacity 0.3s ease-in-out;
+}
+.header__link > a::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    background-color: black;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.header__link > a:hover::before {
+    opacity: 1;
+}
+.header__link > a:hover::after {
+    opacity: 1;
+}
+
+//burger menu
+.header__burger {
+    @include button__mini;
+    @include button-transition;
+    display: block;
+    @include min-width("xm") {
+        display: none;
+    }
+}

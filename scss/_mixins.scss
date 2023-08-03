@@ -1,0 +1,105 @@
+// mixins
+@mixin container {
+    max-width: 1170px;
+    margin: 0 auto;
+    // outline: 1px solid black;
+}
+
+@mixin button__mini {
+  width: 53px;
+  height: 53px;
+  border: 1px solid #F2F2F2;
+  background: #FFF;
+  cursor: pointer;
+}
+@mixin button__big {
+  width: 222px;
+  height: 71px;
+  border: 1px solid #F2F2F2;
+  background: #FFF;
+  cursor: pointer;
+}
+
+@mixin button-transition {
+  transition: all 1s ease-in-out;
+  &:hover {
+    background: $light-gray;
+    transition: all 1s ease-in-out;
+  }
+}
+@mixin button-transition-dark {
+  transition: all 1s ease-in-out;
+  &:hover {
+    background: $gray-hover;
+    color: $white;
+    transition: all 1s ease-in-out;
+  }
+}
+@mixin feedback-input {
+  background-color: $feedback-input-bg;
+  max-width: 390px;
+  height: 45px;
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-bottom: 10px;
+  border: none;
+  &::placeholder {
+    color: #8D8D8D;
+    font-size: $md;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+  }
+  &:focus {
+    outline: 1px solid $gray;
+  }
+}
+@mixin required-phone {
+  &::placeholder {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Ctext x="0" y="7" font-size="8px" fill="red"%3E*%3C/text%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: left 120px bottom 45%;
+  }
+}
+@mixin required-email {
+  &::placeholder {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Ctext x="0" y="7" font-size="8px" fill="red"%3E*%3C/text%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: left 45px bottom 45%;
+  }
+}
+
+@mixin feedback-textarea {
+  background-color: $feedback-input-bg;
+  max-width: 390px;
+  height: 147px;
+  padding-left: 21px;
+  padding-right: 21px;
+  margin-bottom: 22px;
+  outline: none;
+  border: none;
+  resize: vertical;
+  &::placeholder {
+    position: relative;
+    color: #8D8D8D;
+    font-size: $md;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Ctext x="0" y="7" font-size="8px" fill="red"%3E*%3C/text%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: left 75px bottom 45%;
+  }
+  &:focus {
+    outline: 1px solid $gray;
+  }
+}
+
+// SCSS mixin for min-width media query
+@mixin min-width($breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }

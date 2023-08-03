@@ -1,0 +1,128 @@
+@import './variables';
+@import './mixins';
+
+.footer {
+    background-color: #2C2C2C;
+    color: $white;
+    padding-top: 58px;
+}
+.footer__content {
+    @include container;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @include min-width("sm") {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+.footer-logo {
+    margin-bottom: 20px;
+    @include min-width("sm") {
+        margin-bottom: 0px;
+ }
+}
+.footer__information {
+}
+.footer__title {
+    color: $white;
+    font-size: $base;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+.footer__link {
+    margin-bottom: 16px;
+}
+.footer__link > a {
+    text-decoration: none;
+    color: $white;
+    font-size: $md;
+    font-style: normal;
+    font-weight: 500;
+    line-height: xl;
+    letter-spacing: 0.42px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: $light-gray;
+        transition: all 0.3s ease-in-out;
+    }
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__contacts__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: $white;
+    font-size: $md;
+    font-style: normal;
+    font-weight: 500;
+    line-height: xl;
+    letter-spacing: 0.42px;
+    margin-bottom: 20px;
+    @include min-width("sm") {
+        align-items: flex-start;
+        margin-bottom: 0px;
+    }
+}
+.footer__contacts-location {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin-bottom: 30px;
+    @include min-width("sm") {
+        flex-direction: row;
+    }
+}
+.footer__contacts-phone{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin-bottom: 30px;
+    @include min-width("sm") {
+        flex-direction: row;
+    }
+}
+.footer__contacts-email{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    @include min-width("sm") {
+        flex-direction: row;
+    }
+}
+
+.footer__socials-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    @include min-width("sm") {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.footer-copyrights {
+    @include container;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+}

@@ -1,0 +1,89 @@
+@import './variables';
+@import './mixins';
+
+.feedback {
+    @include container;
+    margin-bottom: 120px;
+}
+.feedback__title{
+    color: $light-gray;
+    font-size: $title-size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: $title-size;
+    margin-bottom: 22px;
+    text-align: center;
+    @include min-width("md") {
+        text-align: unset;
+    }
+}
+.feedback__main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include min-width("md") {
+        flex-direction: row;
+    }
+}
+.feedback__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include min-width("md") {
+        align-items: unset;
+    }
+}
+.feedback__left-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    @include min-width("sm") {
+        align-items: unset;
+        max-width: unset;
+    }
+}
+.feedback__input {
+    @include feedback-input;
+    
+}
+.required-phone {
+    @include required-phone;
+}
+.required-email {
+    @include required-email;
+}
+.feedback__textarea {
+    @include feedback-textarea;
+}
+.feedback__text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback__text {
+    color: $gray;
+    font-size: $md;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    margin-bottom: 21px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+// button
+.our__projects-button {
+    justify-content: flex-start
+}
+
+
+
+.feedback__right {
+    width: 100%;
+    max-width: 749px;
+    @include min-width("xl") {
+        width: unset;
+        max-width: unset;
+    }
+}

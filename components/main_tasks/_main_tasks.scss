@@ -1,0 +1,67 @@
+
+
+.main__tasks-text {
+    color: $light-gray;
+    font-size: $title-size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: $title-size;
+    margin-bottom: 60px;
+}
+.main_tasks-numbers{
+    display: flex;
+    justify-content: space-between;
+}
+
+// main__tasks-left
+.main__tasks-left {
+    border: 1px solid black;
+    display: flex;
+    width: 413px;
+    height: min-content;
+    align-items: center;
+}
+.main__tasks-left-number{
+    color: $extra-light-gray;
+    font-family: SF Pro Display;
+    font-size: 12.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-right: 30px;
+}
+.main__tasks-left-text{
+    color: #333;
+    font-size: $lg;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    max-width: 279px;
+}
+
+
+// main__tasks-right
+.main__tasks-right {
+    border: 1px solid black;
+    display: flex;
+    width: 570px;
+    height: min-content;
+    align-items: center;
+}
+.main__tasks-right-number{
+    color: $extra-light-gray;
+    font-family: SF Pro Display;
+    font-size: 12.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-right: 30px;
+}
+.main__tasks-right-text{
+    color: #333;
+    font-size: $lg;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    max-width: 420px;
+}

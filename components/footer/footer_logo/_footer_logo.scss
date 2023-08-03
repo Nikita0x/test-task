@@ -1,0 +1,15 @@
+// footer-logo
+.footer-logo {
+    position: relative;
+    border: 2px solid  black;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 145px;
+    height: 94px;
+}
+.footer-logo__text {
+    position: absolute;
+    bottom: 0;
+}

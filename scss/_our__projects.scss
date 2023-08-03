@@ -1,0 +1,322 @@
+@import './variables';
+@import './mixins';
+
+
+.our__projects {
+    @include container;
+    margin-bottom: 120px;
+}
+
+.our__projects__title {
+    color: $light-gray;
+    font-size: $title-size;
+    font-style: normal;
+    font-weight: 300;
+    line-height: $title-size;
+    margin-bottom: 3.75rem;
+    text-align: center;
+    @include min-width('sm') {
+        text-align: center;
+    }
+    @include min-width('xl') {
+        text-align: start;
+    }
+
+}
+.our__projects-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    @include min-width('xl') {
+        flex-direction: row;
+    }
+}
+
+.our__projects-card-1-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+}
+.our__projects-card-1-text{
+    z-index: 1;
+    max-width: 400px;
+    font-size: $base;
+    font-style: normal;
+    font-weight: 700;
+    line-height: $title-size;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    @include min-width('sm') {
+        font-size: $baseplus;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        font-size: $title-size;
+    }
+}
+.our__projects-card-1-subtext{
+    z-index: 1;
+    font-size: $sm;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $sm;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+.our__projects-button-arrow {
+    padding-left: $sm;
+}
+.our__projects-card-1-overlay{
+    position: absolute;
+    background-color: $gray;
+    inset: 0;
+    opacity: 0.8;
+}
+
+
+.our__projects-card-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        font-size: $title-size;
+        max-width: unset;
+        width: unset;
+    }
+}
+.our__projects-card-1-image {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        font-size: $title-size;
+        max-width: unset;
+        width: unset;
+
+    }
+}
+
+.our__projects-card-2 {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+.our__projects-card-2-image {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+
+.our__projects-card-3 {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+.our__projects-card-3-image {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+
+.our__projects-card-4 {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+.our__projects-card-4-image {
+    width: 100%;
+    max-width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+
+
+.our__projects-card-5 {
+    width: 100%;
+    max-width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+
+}
+.our__projects-card-5-image {
+    width: 100%;
+    @include min-width('xm') {
+        max-width: 440px;
+    }
+    @include min-width('sm') {
+        font-size: $title-size;
+    }
+    @include min-width('md') {
+        font-size: $title-size;
+    }
+    @include min-width('lg') {
+        font-size: $title-size;
+    }
+    @include min-width('xl') {
+        max-width: unset;
+        width: unset;
+    }
+}
+
+
+// button
+.our__projects-footer {
+    display: flex;
+    justify-content: center;
+    @include min-width('xl') {
+        justify-content: flex-end;
+    }
+}
+.our__projects-button {
+    @include button__big;
+    @include button-transition-dark;
+    background-color: $gray
+}
+.our__projects-button-title {
+    text-transform: uppercase;
+    color:$white;
+    font-size: $sm;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $sm;
+    letter-spacing: 2.4px;
+    margin-right: 12px;
+}
+.our__projects-button-arrow {
+    color:$white;
+}
